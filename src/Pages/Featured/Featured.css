@@ -1,0 +1,9 @@
+.featured-item {
+    /* make thE background image  darker  */
+
+    background-image: url("../../assets/home/featured.jpg");
+    /* make it cover size */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
