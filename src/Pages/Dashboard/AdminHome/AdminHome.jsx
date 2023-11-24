@@ -25,6 +25,7 @@ const AdminHome = () => {
         queryKey: ["analytics"],
         queryFn: async () => {
             const res = await axiosSecure.get("/admin-stats");
+            console.log(res);
             return res.data;
         },
     });

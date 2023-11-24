@@ -23,7 +23,8 @@ const UpdateItem = () => {
         queryKey: ["item", id],
         queryFn: async () => {
             const res = await axiosPublic.get(`/menu/${id}`);
-            return res.data;
+            console.log(res);
+            return res.data.menu;
         },
     });
     if (isLoading) {
@@ -56,7 +57,7 @@ const UpdateItem = () => {
                 menuItem
             );
             console.log(respons);
-            if (respons.data.insertedId) {
+            if (respons.data.menu.insertedId) {
                 Swal.fire({
                     icon: "success",
                     title: "Item added",
@@ -79,7 +80,7 @@ const UpdateItem = () => {
                 menuItem
             );
             console.log(respons);
-            if (respons.data.modifiedCount) {
+            if (respons.data.menu.modifiedCount) {
                 Swal.fire({
                     icon: "success",
                     title: "Item Updated",

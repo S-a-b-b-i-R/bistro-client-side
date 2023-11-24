@@ -9,7 +9,7 @@ const PaymentHistory = () => {
         queryKey: ["payments", user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get(`payments/${user.email}`);
-            return res.data;
+            return res.data.payment;
         },
     });
     const total = payments.reduce((sum, payment) => {

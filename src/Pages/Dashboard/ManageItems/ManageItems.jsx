@@ -23,7 +23,7 @@ const ManageItems = () => {
             if (result.isConfirmed) {
                 const res = await axiosSecure.delete(`/menu/${item._id}`);
                 console.log(res.data);
-                if (res.data.deletedCount > 0) {
+                if (res.status === 200) {
                     Swal.fire({
                         icon: "success",
                         title: "Item deleted",
