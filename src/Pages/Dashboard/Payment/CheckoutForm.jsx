@@ -6,7 +6,7 @@ import useCart from "../../../Hooks/useCart";
 import useAuth from "../../../Hooks/UseAuth";
 import { useNavigate } from "react-router-dom";
 import "./Common.css";
-import "./2-Card-Detailed.css";
+// import "./2-Card-Detailed.css";
 const CheckoutForm = () => {
     const [error, setError] = useState("");
     const [clientSecret, setClientSecret] = useState("");

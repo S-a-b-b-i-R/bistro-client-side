@@ -60,7 +60,7 @@ select {
     display: block;
     border: none;
     font-size: 18px;
-    margin: 10px 0 20px 0;
+    margin: 10px;
     max-width: 100%;
     padding: 10px 14px;
     box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px,

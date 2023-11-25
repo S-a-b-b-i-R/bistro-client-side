@@ -3,7 +3,6 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useMenu = () => {
     const axiosPublic = useAxiosPublic();
-
     const {
         data: menu = [],
         isPending: loading,
@@ -11,7 +10,7 @@ const useMenu = () => {
     } = useQuery({
         queryKey: ["menu"],
         queryFn: async () => {
-            const res = await axiosPublic.get("/menu");
+            const res = await axiosPublic.get(`menu`);
             return res.data.menu;
         },
     });
