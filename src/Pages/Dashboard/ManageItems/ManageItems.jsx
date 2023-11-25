@@ -80,12 +80,12 @@ const ManageItems = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Image</th>
-                            <th>Item Name</th>
-                            <th>Price</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th className="w-[5%]">#</th>
+                            <th className="w-[15%]">Image</th>
+                            <th className="w-[55%]">Item Name</th>
+                            <th className="w-[15%]">Price</th>
+                            <th className="w-[5%]">Update</th>
+                            <th className="w-[5%]">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
