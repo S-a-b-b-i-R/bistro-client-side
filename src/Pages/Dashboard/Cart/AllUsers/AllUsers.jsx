@@ -25,7 +25,7 @@ const AllUsers = () => {
             if (result.isConfirmed) {
                 axiosSecure.patch(`/users/admin/${id}`).then((res) => {
                     console.log(res);
-                    if (res.data.modifiedCount) {
+                    if (res.status === 200) {
                         Swal.fire({
                             icon: "success",
                             title: "User updated",
@@ -52,7 +52,7 @@ const AllUsers = () => {
             if (result.isConfirmed) {
                 axiosSecure.delete(`/users/${id}`).then((res) => {
                     console.log(res);
-                    if (res.data.deletedCount) {
+                    if (res.status === 200) {
                         Swal.fire({
                             icon: "success",
                             title: "User deleted",

@@ -10,16 +10,16 @@ import { useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
+    const axiosPublic = useAxiosPublic();
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
-            .then((res) => res.json())
-            .then((data) => {
-                setReviews(data.review);
-            });
-    }, []);
+        axiosPublic.get("/reviews").then((res) => {
+            setReviews(res.data.review);
+        });
+    }, [axiosPublic]);
     return (
         <div className="my-20">
             <SectionTitle

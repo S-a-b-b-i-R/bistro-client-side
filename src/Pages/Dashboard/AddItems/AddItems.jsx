@@ -30,7 +30,7 @@ const AddItems = () => {
             };
             const respons = await axiosSecure.post("/menu", menuItem);
             console.log(respons);
-            if (respons.data.insertedId) {
+            if (respons.status === 200) {
                 Swal.fire({
                     icon: "success",
                     title: "Item added",

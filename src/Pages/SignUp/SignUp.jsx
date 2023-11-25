@@ -32,14 +32,15 @@ const SignUp = () => {
                         axiosPublic
                             .post("/users", userInfo)
                             .then((result) => {
-                                if (result.data.acknowledged) {
+                                // console.log(result);
+                                if (result.status === 200) {
                                     Swal.fire({
                                         icon: "success",
                                         title: "Signed Up!",
                                         showConfirmButton: false,
                                         timer: 1500,
                                     });
-                                    navigate("/login");
+                                    navigate("/");
                                 }
                             })
                             .catch((error) => {
