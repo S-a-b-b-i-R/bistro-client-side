@@ -8,6 +8,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import Loading from "../../../Components/Loader/Loading";
 const ManageItems = () => {
     const [itemsPerPage, setItemsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(0);
@@ -27,7 +28,7 @@ const ManageItems = () => {
     });
 
     if (loading) {
-        return <h1>Loading...</h1>;
+        return <Loading />;
     }
     const numberofPages = Math.ceil(57 / itemsPerPage);
     const pages = [...Array(numberofPages).keys()];
