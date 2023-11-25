@@ -8,8 +8,10 @@ import pizzaImg from "../../../assets/menu/pizza-bg.jpg";
 import useMenu from "../../../Hooks/useMenu";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import MenuCategory from "../MenuCategory/MenuCategory";
+import Loading from "../../../Components/Loader/Loading";
 const Menu = () => {
-    const [menu] = useMenu();
+    const [menu, loading] = useMenu();
+    if (loading) return <Loading />;
     const dessert = menu
         ? menu.filter((item) => item.category === "dessert")
         : [];

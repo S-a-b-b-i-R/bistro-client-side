@@ -16,6 +16,7 @@ import {
     Pie,
     Legend,
 } from "recharts";
+import Loading from "../../../Components/Loader/Loading";
 
 const AdminHome = () => {
     const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
@@ -39,7 +40,7 @@ const AdminHome = () => {
             },
         });
 
-    if (isLoading || orderAnlyticsLoading) return <div>Loading...</div>;
+    if (isLoading || orderAnlyticsLoading) return <Loading />;
 
     const getPath = (x, y, width, height) => {
         return `M${x},${y + height}C${x + width / 3},${y + height} ${
