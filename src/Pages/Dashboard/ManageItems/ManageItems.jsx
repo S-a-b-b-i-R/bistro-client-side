@@ -76,7 +76,7 @@ const ManageItems = () => {
             <SectionTitle heading="Manage Items" subheading="---Hurry Up---" />
 
             <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table table-xs">
                     {/* head */}
                     <thead>
                         <tr>
@@ -130,9 +130,6 @@ const ManageItems = () => {
                 </table>
             </div>
             <div className="pagination">
-                <div>
-                    <p>Current page: {currentPage}</p>
-                </div>
                 <button
                     onClick={handlePrevPage}
                     disabled={currentPage === 0}
