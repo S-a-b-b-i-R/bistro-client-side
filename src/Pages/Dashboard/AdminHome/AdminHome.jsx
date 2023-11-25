@@ -17,6 +17,7 @@ import {
     Legend,
 } from "recharts";
 import Loading from "../../../Components/Loader/Loading";
+import PropTypes from "prop-types";
 
 const AdminHome = () => {
     const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
@@ -55,10 +56,17 @@ const AdminHome = () => {
 
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;
-
         return (
             <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />
         );
+    };
+
+    TriangleBar.propTypes = {
+        fill: PropTypes.string,
+        x: PropTypes.number,
+        y: PropTypes.number,
+        width: PropTypes.number,
+        height: PropTypes.number,
     };
 
     const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
